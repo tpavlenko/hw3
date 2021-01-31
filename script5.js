@@ -2,20 +2,22 @@
 // Нельзя использовать стандартный метод reverse(). Постарайтесь не использовать дополнительный массив.
 
 var a = [1, 5, 6, 2, 4];
-var halfLength = a.length / 2;
+var arrayLength = a.length,
+	halfLength = arrayLength / 2;
 
 for (var i = 0; i < halfLength; i++) {
 	var start = a[i];
-	a[i] = a[a.length - i - 1];
-	a[a.length - i - 1] = start;
+	a[i] = a[arrayLength - i - 1];
+	a[arrayLength - i - 1] = start;
 }
 
 console.log(a);
 
 
 /*var a = [1, 5, 6, 2, 4];
+var arrayLength = a.length;
 
-for (var i = 0; i < a.length - 1; i++) {
+for (var i = 0; i < arrayLength - 1; i++) {
 	a.splice(i, 0, a.pop());
 }
 

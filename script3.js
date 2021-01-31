@@ -8,8 +8,8 @@ var a = [];
 
 for (var i = 0, maxCount = n; i < maxCount; i++) {
 	var random = Math.round(Math.random() * (max - min) + min);
-	if ((Math.floor(random / 100) == 0) && random >= 10)
+	if (random >= 10 && random <= 99 || random <= -10 && random > -99)
 		a[a.length] = random;
 }
 
-document.write(a);
+console.log(a);
